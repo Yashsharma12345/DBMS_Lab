@@ -37,20 +37,7 @@
   --mb-6: 3rem;
 
   /*========== z index ==========*/
-  --z-tooltip: 10;
   --z-fixed: 100;
-}
-
-@media screen and (min-width: 768px){
-  :root{
-    --biggest-font-size: 4rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-  }
 }
 
 /*========== BASE ==========*/
@@ -180,16 +167,9 @@ img{
   margin-bottom: var(--mb-2);
 }
 
-.nav__link, .nav__logo, .nav__toggle{
+.nav__link{
   color: var(--text-color);
   font-weight: var(--font-medium);
-}
-
-.nav__logo:hover{
-  color: var(--first-color);
-}
-
-.nav__link{
   transition: .3s;
 }
 
@@ -197,55 +177,9 @@ img{
   color: var(--first-color);
 }
 
-.nav__toggle{
-  font-size: 1.3rem;
-  cursor: pointer;
-}
-
-/* Show menu */
-.show-menu{
-  top: var(--header-height);
-}
-
 /* Active menu */
 .active-link{
   color: var(--first-color);
-}
-
-/* Change background header */
-.scroll-header{
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
-}
-
-/* Scroll top */
-.scrolltop{
-  position: fixed;
-  right: 1rem;
-  bottom: -20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: .3rem;
-  background: rgba(6,156,84,.5);
-  border-radius: .4rem;
-  z-index: var(--z-tooltip);
-  transition: .4s;
-  visibility: hidden;
-}
-
-.scrolltop:hover{
-  background-color: var(--first-color-alt);
-}
-
-.scrolltop__icon{
-  font-size: 1.8rem;
-  color: var(--body-color);
-}
-
-/* Show scrolltop */
-.show-scroll{
-  visibility: visible;
-  bottom: 1.5rem;
 }
 
 /*========== HOME ==========*/
@@ -375,29 +309,6 @@ img{
   border-radius: .5rem 0 .5rem 0;
 }
 
-/*========== APP ==========*/
-.app__data{
-  text-align: center;
-}
-
-.app__description{
-  margin-bottom: var(--mb-5);
-}
-
-.app__stores{
-  margin-bottom: var(--mb-4);
-}
-
-.app__store{
-  width: 120px;
-  margin: 0 var(--mb-1);
-}
-
-.app__img{
-  width: 230px;
-  justify-self: center;
-}
-
 /*========== CONTACT ==========*/
 .contact__container{
   text-align: center;
@@ -447,13 +358,6 @@ img{
   color: var(--first-color);
 }
 
-.footer__copy{
-  text-align: center;
-  font-size: var(--small-font-size);
-  color: var(--text-color-light);
-  margin-top: 3.5rem;
-}
-
 /*========== MEDIA QUERIES ==========*/
 @media screen and (min-width: 576px){
   .home__container,
@@ -464,12 +368,12 @@ img{
   }
 
   .about__data, .about__initial,
-  .app__data, .app__initial,
+  .app__initial,
   .contact__container, .contact__initial{
     text-align: initial;
   }
 
-  .about__img, .app__img{
+  .about__img{
     width: 380px;
     order: -1;
   }
@@ -501,9 +405,6 @@ img{
   .nav__item{
     margin-left: var(--mb-5);
     margin-bottom: 0;
-  }
-  .nav__toggle{
-    display: none;
   }
 
   .change-theme{
